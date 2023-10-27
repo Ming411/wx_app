@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "usingComponents": {
+        "demo-cpn": "/components/demo-cpn/demo-cpn"
+    }
 }

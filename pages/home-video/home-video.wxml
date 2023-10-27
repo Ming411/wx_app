@@ -1,6 +1,23 @@
 <!--pages/home-video/home-video.wxml-->
+
+<wxs src='../../utils/format.wxs' module="format"></wxs>
 <view class="video">
   <block wx:for="{{topMVs}}" wx:key="id">
+    <!-- image默认存在高度 可设置宽或高搭配mode来自动修复 -->
+    <image src="../../assets/img/61081697.jpg" mode="widthFix" class="avatar" bind:tap="handleClick" />
     <text>{{item.name}}</text>
+    <!-- 使用模块名可访问wxs中封装的工具方法 -->
+    <text>{{format.formatCount(51589719)}}</text>
   </block>
+
+  <view wx:for="{{topMVs}}" wx:key="id" wx:for-item="mv" wx:for-index="i">
+    <text>{{mv.name}}---{{i}}</text>
+  </view>
+
+  <demo-cpn item="{{userInfo}}"></demo-cpn>
+
+
+  <view class="outer" bind:tap="handleClick2" data-name="why">
+    <view class="inner"></view>
+  </view>
 </view>

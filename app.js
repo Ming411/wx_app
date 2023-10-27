@@ -1,19 +1,15 @@
 // app.js
 App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+  // 小程序加载完毕
+  onLaunch(options) {
+    // console.log(options, '小程序已启动')
   },
+  // 显示小程序
+  onShow() {},
+  // 隐藏后台小程序
+  onHide() {},
+  // 自定义全局属性
   globalData: {
-    userInfo: null
+    token: 'noCoder_token'
   }
 })
