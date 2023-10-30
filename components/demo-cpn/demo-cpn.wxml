@@ -1,4 +1,0 @@
-<!--components/demo-cpn/demo-cpn.wxml-->
-<text>
-    {{item.name}}
-</text>

@@ -9,15 +9,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "tab2",
-          "pathName": "pages/home-video/home-video",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "视频页",
-          "pathName": "pages/home-video/home-video",
+          "name": "video页",
+          "pathName": "pages/main-video/main-video",
           "query": "",
           "launchMode": "default",
           "scene": null
