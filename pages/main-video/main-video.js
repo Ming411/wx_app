@@ -1,7 +1,7 @@
 // pages/main-video/main-video.js
 import {
   getTopMV
-} from '../../service/api_video'
+} from '../../services/video'
 Page({
 
   /**
@@ -89,7 +89,13 @@ Page({
     // 2.如果有更多的数据, 再请求新的数据
     this.fetchTopMV()
   },
-
+  // 组件点击事件
+  onVideoItemTap(event) {
+    // const item = event.currentTarget.dataset.item
+    // wx.navigateTo({
+    //   url: `/pages/detail-video/detail-video?id=${item.id}`,
+    // })
+  },
   /**
    * 用户点击右上角分享
    */

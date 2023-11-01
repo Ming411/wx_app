@@ -1,8 +1,35 @@
 {
   "pages": [
     "pages/main-music/main-music",
-    "pages/main-video/main-video"
+    "pages/main-video/main-video",
+    "pages/detail-search/detail-search",
+    "pages/detail-song/detail-song",
+    "pages/detail-menu/detail-menu"
   ],
+  "subPackages": [{
+      "root": "packageVideo",
+      "name": "video",
+      "pages": [
+        "pages/detail-video/detail-video"
+      ]
+    },
+    {
+      "root": "packagePlayer",
+      "name": "player",
+      "pages": [
+        "pages/music-player/music-player"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/main-music/main-music": {
+      "network": "all",
+      "packages": [
+        "packagePlayer",
+        "video"
+      ]
+    }
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fafafa",
@@ -29,6 +56,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
